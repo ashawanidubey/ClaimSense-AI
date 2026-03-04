@@ -152,6 +152,13 @@ curl -X POST "http://127.0.0.1:8000/analyze-claim/" \
 - `screenshots/explanation.png` - Denial explanation output
 - `screenshots/appeal-letter.png` - Generated appeal letter
 
+## Future Enhancements
+
+- EPIC Bridges integration
+- HL7 claim ingestion
+- FHIR Claim resource validation
+- Multi-agent denial prevention workflow
+
 ## Example AI Response
 
 ```json
@@ -162,13 +169,6 @@ curl -X POST "http://127.0.0.1:8000/analyze-claim/" \
   "recommendation": "Verify payer authorization before submission",
   "estimated_revenue_risk": "$1250"
 }
-
-## Future Enhancements
-
-- EPIC Bridges integration
-- HL7 claim ingestion
-- FHIR Claim resource validation
-- Multi-agent denial prevention workflow
 
 ## Hackathon Pitch Summary
 ClaimSense-AI is a practical AI copilot for healthcare revenue recovery. It transforms denial management from a manual back-office burden into a rapid, standardized, and scalable workflow. By combining deterministic claim parsing with Azure OpenAI-generated clinical-financial narratives, the platform enables teams to respond faster, improve appeal quality, and accelerate reimbursement cycles. This positions ClaimSense-AI as a high-impact solution with clear ROI and a credible path to enterprise adoption.
