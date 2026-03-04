@@ -2,6 +2,12 @@
 
 ClaimSense-AI is an AI-powered claims intelligence assistant that helps healthcare teams convert denied claims into actionable appeal workflows in minutes.
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![AI](https://img.shields.io/badge/AI-LLM-purple)
+![Healthcare](https://img.shields.io/badge/Healthcare-HL7%20%7C%20FHIR-blue)
+![License](https://img.shields.io/badge/license-MIT-orange)
+
 ## Problem Statement
 Healthcare providers lose significant revenue due to denied claims, manual rework, and delayed appeals. Current denial-management workflows are often:
 - Labor intensive (manual chart/document review)
@@ -54,6 +60,22 @@ ClaimSense-AI uses a modular backend + lightweight frontend architecture designe
 - Azure OpenAI (LLM inference)
 - Pytest (unit testing)
 - Requests (frontend-backend HTTP)
+
+## System Architecture
+
+User (Provider / Billing Team)
+↓
+Frontend Dashboard (React)
+↓
+FastAPI Backend
+↓
+Claim Analyzer Agent
+↓
+AI Reasoning Engine (Azure OpenAI / Mock LLM)
+↓
+Denial Risk Prediction
+↓
+Response to Dashboard
 
 ## Setup Instructions
 ### 1. Clone and enter project
@@ -129,6 +151,24 @@ curl -X POST "http://127.0.0.1:8000/analyze-claim/" \
 - `screenshots/parsed-data.png` - Parsed claim JSON output
 - `screenshots/explanation.png` - Denial explanation output
 - `screenshots/appeal-letter.png` - Generated appeal letter
+
+## Example AI Response
+
+```json
+{
+  "claim_id": "CLM12345",
+  "risk_score": 0.78,
+  "denial_reason": "Missing prior authorization",
+  "recommendation": "Verify payer authorization before submission",
+  "estimated_revenue_risk": "$1250"
+}
+
+## Future Enhancements
+
+- EPIC Bridges integration
+- HL7 claim ingestion
+- FHIR Claim resource validation
+- Multi-agent denial prevention workflow
 
 ## Hackathon Pitch Summary
 ClaimSense-AI is a practical AI copilot for healthcare revenue recovery. It transforms denial management from a manual back-office burden into a rapid, standardized, and scalable workflow. By combining deterministic claim parsing with Azure OpenAI-generated clinical-financial narratives, the platform enables teams to respond faster, improve appeal quality, and accelerate reimbursement cycles. This positions ClaimSense-AI as a high-impact solution with clear ROI and a credible path to enterprise adoption.
