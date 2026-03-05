@@ -147,6 +147,7 @@ curl -X POST "http://127.0.0.1:8000/analyze-claim/" \
 ## Screenshots
 > Add screenshots here before final submission.
 
+- `screenshots/application-ui.png` - Full page screengrab of the application
 - `screenshots/upload-screen.png` - Upload interface
 - `screenshots/parsed-data.png` - Parsed claim JSON output
 - `screenshots/explanation.png` - Denial explanation output
