@@ -61,6 +61,7 @@ ClaimSense-AI uses a modular backend + lightweight frontend architecture designe
 - Pytest (unit testing)
 - Requests (frontend-backend HTTP)
 
+<!--
 ## System Architecture
 
 User (Provider / Billing Team)
@@ -76,6 +77,27 @@ AI Reasoning Engine (Azure OpenAI / Mock LLM)
 Denial Risk Prediction
 ↓
 Response to Dashboard
+-->
+
+## System Architecture
+
+```mermaid
+flowchart TD
+
+A[User (Provider / Billing Team)]
+B[Frontend Dashboard (React)]
+C[FastAPI Backend]
+D[Claim Analyzer Agent]
+E[LLM Engine (Azure OpenAI / Mock AI)]
+F[Risk Score + Denial Prediction]
+G[Response to Dashboard]
+
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+F --> G
 
 ## Setup Instructions
 ### 1. Clone and enter project
