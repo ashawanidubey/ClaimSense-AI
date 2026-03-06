@@ -84,11 +84,11 @@ Response to Dashboard
 ```mermaid
 flowchart TD
 
-A[User (Provider / Billing Team)]
+A[User (Provider &#47; Billing Team)]
 B[Frontend Dashboard (React)]
 C[FastAPI Backend]
 D[Claim Analyzer Agent]
-E[LLM Engine (Azure OpenAI / Mock AI)]
+E[LLM Engine (Azure OpenAI &#47; Mock AI)]
 F[Risk Score + Denial Prediction]
 G[Response to Dashboard]
 
