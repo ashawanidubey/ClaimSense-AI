@@ -50,7 +50,7 @@ def _read_upload_content(content: bytes) -> str:
         ) from exc
 
 
-@app.post("/analyze-claim", status_code=status.HTTP_200_OK)
+@app.post("/analyze-claim/", status_code=status.HTTP_200_OK)
 async def analyze_claim(file: UploadFile = File(...)) -> dict[str, Any]:
     """Analyze an uploaded claim document and return structured results."""
     _validate_file(file)
